@@ -1,7 +1,7 @@
 /* Variables */
 :root {
 	--primary: #EA40A4;
-	--business: #3a82ee;
+	--business: #ff0c0c;
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
@@ -33,7 +33,7 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 /* End of Resets */
 
 body {
-	background: paleturquoise;
+	background-image: url(images/background.jpg);
 	color: var(--dark);
 }
 
@@ -53,12 +53,17 @@ h3 {
 }
 
 h4 {
-	color: bl;
+	color: black;
 	font-size: 0.875rem;
 	font-weight: 700;
 	margin-bottom: 0.5rem;
 }
-
+/*.create-todo{
+   width: 50%; 
+   max-width: 540px;
+   border-radius: 50px;
+   /*padding: 40px 30px 70px;
+}*/
 .create-todo input[type="text"] {
 	display: block;
 	width: 100%;
@@ -102,7 +107,7 @@ input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	border-radius: 999px;
-	border: 2px solid var(--business);
+	border: 2px solid red;
 	box-shadow: var(--business-glow);
 }
 
@@ -135,7 +140,7 @@ input:checked ~ .bubble::after {
 }
 
 .create-todo .options label div {
-	color: var(--dark);
+	color: #000;
 	font-size: 1.125rem;
 	margin-top: 1rem;
 }
@@ -166,7 +171,7 @@ input:checked ~ .bubble::after {
 .todo-list .todo-item {
 	display: flex;
 	align-items: center;
-	background-color: #FFF;
+	background-color: pink;
 	padding: 1rem;
 	border-radius: 0.5rem;
 	box-shadow: var(--shadow);
@@ -197,7 +202,7 @@ input:checked ~ .bubble::after {
 	display: block;
 	padding: 0.5rem;
 	border-radius: 0.25rem;
-	color: #FFF;
+	color: #000;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
 }
@@ -208,11 +213,11 @@ input:checked ~ .bubble::after {
 
 .todo-item .actions .edit {
 	margin-right: 0.5rem;
-	background-color: var(--primary);
+	background-color: white;
 }
 
 .todo-item .actions .delete {
-	background-color: var(--danger);
+	background-color: red;
 }
 
 .todo-item.done .todo-content input {
