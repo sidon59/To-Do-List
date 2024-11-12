@@ -33,12 +33,15 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 /* End of Resets */
 
 body {
+	background: url(images/background.jpg) no-repeat center center fixed;
+	background-size: cover;
 	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 #style{
-	background-image: none;
-	image-resolution: 1000px;
-	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
 }
 
 section {
