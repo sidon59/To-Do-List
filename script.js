@@ -1,3 +1,18 @@
+//loading screen
+document.addEventListener("DOMContentLoaded", () => {
+    // Set a timeout for 5 seconds to hide the loading screen
+    setTimeout(() => {
+        // Hide the loading screen
+        const loadingScreen = document.getElementById("loading-screen");
+        const appContent = document.getElementById("app-content");
+        
+        if (loadingScreen && appContent) {
+            loadingScreen.style.display = "none";
+            appContent.style.display = "block";
+        }
+    }, 3000);
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
     const todoForm = document.getElementById("new-todo-form");
@@ -99,4 +114,5 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("todos", JSON.stringify(todos));
         displayTodos();
     }
+
 });
