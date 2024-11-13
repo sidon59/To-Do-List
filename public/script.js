@@ -1,6 +1,6 @@
 //loading screen
 document.addEventListener("DOMContentLoaded", () => {
-    // Set a timeout for 5 seconds to hide the loading screen
+    // Setting a timeout for 3 seconds to hide the loading screen
     setTimeout(() => {
         // Hide the loading screen
         const loadingScreen = document.getElementById("loading-screen");
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
 });
 
+//to do section
 document.addEventListener("DOMContentLoaded", () => {
     let todos = JSON.parse(localStorage.getItem("todos")) || [];
     const todoForm = document.getElementById("new-todo-form");
@@ -37,17 +38,19 @@ document.addEventListener("DOMContentLoaded", () => {
             };
 
             todos.push(newTodo);
-            localStorage.setItem("todos", JSON.stringify(todos)); // Save to local storage
-            displayTodos(); // Refresh todo list
-            todoForm.reset(); // Clear form input
+            //saves to local storage
+            localStorage.setItem("todos", JSON.stringify(todos)); 
+            displayTodos(); 
+            todoForm.reset(); 
         } else {
+            //if none is selected
             alert("Please enter a task and select a category.");
         }
     });
 
     // Function to display all todos in the list
     function displayTodos() {
-        todoList.innerHTML = ""; // Clear current list
+        todoList.innerHTML = ""; 
         todos.forEach((todo, index) => {
             const todoItem = document.createElement("div");
             todoItem.classList.add("todo-item");
