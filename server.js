@@ -2,14 +2,14 @@
 const express = require('express');
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
-// Serve "public" directory
-//app.use(express.static('public'));
+// Serve directory
+app.use(express.static(__dirname));
 
-app.get('/',(res,req)=>{
-     res.render('index');
- });
+//app.get('/',(res,req)=>{
+  ///   res.render('index');
+ //33});
 // Starting the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
