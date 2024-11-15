@@ -7,7 +7,7 @@ styled loading screen that displays for 3 seconds upon launch.
 
 INSTALLATION
 1. Clone the repository
-- git clone https://github.com/sidon59/to-do-list.git
+- git clone https://github.com/sidon59/to-do-list.github.io
 - cd to-do-list
 2. Open in browser
 
