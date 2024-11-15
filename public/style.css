@@ -1,21 +1,3 @@
-/* Variables */
-:root {
-	--primary: #EA40A4;
-	--business: #ff0c0c;
-	--personal: var(--primary);
-	--light: #EEE;
-	--grey: #888;
-	--dark: #313154;
-	--danger: #ff5b57;
-
-	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-	--business-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
-}
-/* End of Variables */
-
-/* Resets */
 * {
 	margin: 0;
 	padding: 0;
@@ -30,15 +12,56 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 	background: none;
 	cursor: initial;
 }
-/* End of Resets */
+/* Loading Screen */
+.loading-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f5f5f5;
+	z-index: 1000; 
+}
+
+.loading-screen h1 {
+	font-size: 2rem;
+	color: #EA40A4; 
+	animation: fade 1s infinite alternate;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0.3;
+	}
+}
 
 body {
+	background: url(images/background4.jpg) no-repeat center center fixed;
+	background-size: cover;
+	display: flex;
 	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	/* Adjust this width as needed */
+	max-width: 600px; 
+	margin: 0 auto;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 #style{
-	background-image: none;
-	image-resolution: 1000px;
-	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
 }
 
 section {
@@ -49,7 +72,7 @@ section {
 }
 
 h3 {
-	color: var(--dark);
+	color: black;
 	font-size: 2rem;
 	font-weight: 400;
 	margin-bottom: 0.5rem;
@@ -73,10 +96,9 @@ h4 {
 	width: 100%;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
-	color: var(--dark);
+	color: black;
 	background-color: #FFF;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
 	margin-bottom: 1.5rem;
 }
 
@@ -92,9 +114,8 @@ h4 {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: pink;
+	background-color:  rgb(170, 112, 145);
 	padding: 1.5rem;
-	box-shadow: var(--shadow);
 	border-radius: 0.5rem;
 	cursor: pointer;
 }
@@ -111,13 +132,13 @@ input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	border-radius: 999px;
-	border: 2px solid red;
-	box-shadow: var(--business-glow);
+	border: 2px solid purple;
+	box-shadow: purple;
 }
 
 .bubble.personal {
-	border-color: var(--personal);
-	box-shadow: var(--personal-glow);
+	border-color: rgb(235, 7, 83);
+	box-shadow: rgb(235, 7, 83);
 }
 
 .bubble::after {
@@ -126,15 +147,15 @@ input[type="checkbox"] {
 	opacity: 0;
 	width: 0px;
 	height: 0px;
-	background-color: var(--business);
-	box-shadow: var(--business-glow);
+	background-color: purple;
+	box-shadow: rgb(228, 15, 228);
 	border-radius: 999px;
 	transition: 0.2s ease-in-out;
 }
 
 .bubble.personal::after {
-	background-color: var(--personal);
-	box-shadow: var(--personal-glow);
+	background-color: rgb(245, 10, 139);
+	box-shadow: rgb(252, 41, 157);
 }
 
 input:checked ~ .bubble::after {
@@ -157,8 +178,7 @@ input:checked ~ .bubble::after {
 	color: #000;
 	font-weight: 700;
 	text-transform: uppercase;
-	background-color: pink;
-	box-shadow: var(--personal-glow);
+	background-color:  rgb(170, 112, 145);
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-out;
@@ -175,10 +195,9 @@ input:checked ~ .bubble::after {
 .todo-list .todo-item {
 	display: flex;
 	align-items: center;
-	background-color: pink;
+	background-color: rgb(170, 112, 145);
 	padding: 1rem;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
 	margin-bottom: 1rem;
 }
 
@@ -193,7 +212,7 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .todo-content input {
-	color: var(--dark);
+	color: black;
 	font-size: 1.125rem;
 }
 
@@ -217,11 +236,11 @@ input:checked ~ .bubble::after {
 
 .todo-item .actions .edit {
 	margin-right: 0.5rem;
-	background-color: white;
+	background-color: rgb(8, 252, 8);
 }
 
 .todo-item .actions .delete {
-	background-color: red;
+	background-color: rgba(255, 10, 10, 0.932);
 }
 
 .todo-item.done .todo-content input {

@@ -7,18 +7,23 @@
 	<title>To_Do_List</title>
 	<!-- CSS Import -->
 	<link rel="stylesheet" href="style.css" />
-	<!-- End of CSS Import -->
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
-	<!-- End of Fonts -->
-</head>
-<body style="background-image: url(images/background4.jpg);">
-	<!-- App Wrapper -->
-	<main class="app">
 
-		<!-- New Todo Section -->
+</head>
+<body>
+
+	<!--loading screen-->
+	<div id="loading-screen" class="loading-screen">
+		<h1>Just 2 secs, we still loading your To Do List :)......</h1>
+	</div>
+
+	<main id="app-content" style="display: none;">
+
+		<!--To do Section -->
+		 <div class="container">
 		<section class="create-todo">
 			<h3>TO DO LIST</h3>
 			<form id="new-todo-form">
@@ -28,7 +33,7 @@
 					placeholder="e.g. Finish the to-do task "
 					name="content"
 					id="content" />
-				
+				<!--categogry part-->
 				<h4>Is it for professional or personal?</h4>
 				<div class="options">
 					<label>
@@ -46,20 +51,18 @@
 				<input type="submit" value="Add To List" />
 			</form>
 		</section>
-		<!-- End of New Todo Section -->
 
-		<!-- Todo List Section -->
+		<!--List Section -->
 		<section class="todo-list">
 			<h3>L I S T</h3>
 			<div class="list" id="todo-list"></div>
 		</section>
-		<!-- End of Todo List Section -->
-
+		 </div>
 	</main>
-	<!-- End of App Wrapper -->
 
 	<!-- JS Import -->
 	<script src="script.js"></script>
-	<!-- End of JS Import -->
+
+	
 </body>
 </html>
