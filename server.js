@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve "public" directory
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 app.get('/',(res,req)=>{
      res.render('index');
